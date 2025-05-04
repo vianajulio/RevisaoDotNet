@@ -12,7 +12,7 @@ public class OrderService : IOrderService
         _orderRepository = orderRepository;
     }
 
-    public async Task<bool> CreateAsync(OrderRequest orderRequest)
+    public async Task<bool> CreateAsync(OrderDto orderRequest)
     {
         var itemsOrder = ItemOrder.CreateItemsOrder(orderRequest.Items);
         var order = Order.Create(orderRequest.ClientName, itemsOrder);

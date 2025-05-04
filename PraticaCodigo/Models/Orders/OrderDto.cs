@@ -2,4 +2,4 @@
 
 namespace PraticaCodigo.Models.Orders;
 
-public record OrderRequest(string ClientName, IEnumerable<ItemRequest> Items);
+public record OrderDto(string ClientName, IEnumerable<ItemDto> Items);

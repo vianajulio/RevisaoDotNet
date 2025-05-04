@@ -29,7 +29,7 @@ public class ItemOrder
         return new ItemOrder(productName, quantity, price);
     }
 
-    public static List<ItemOrder> CreateItemsOrder(IEnumerable<ItemRequest> items)
+    public static List<ItemOrder> CreateItemsOrder(IEnumerable<ItemDto> items)
         => items.Select(i => Create(i.productName, i.quantity, i.price)).ToList();
 
 
